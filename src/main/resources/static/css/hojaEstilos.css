@@ -1,0 +1,44 @@
+legend{
+	background-color: grey;
+	color:white;
+	font-size:20px;
+	text-align: center;
+}
+fieldset{
+	background-color: rgb(222, 203, 205);
+	font-size:14px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}
+
+.tableLogin{
+	background-color: rgb(222, 203, 205);
+	border:1px solid grey;
+	margin: auto;
+	font-size: 18px;
+	padding: 12px;
+		
+}
+body{
+	background-color:rgb(202, 245, 246);
+}
+
+.tableCabecera{
+	margin: 20pX;
+}
+.izq{
+	text-align: right;
+}
+p{
+	text-align: center;
+	
+}
+.cuadroLetras{
+	margin: auto;
+	border:1px solid grey;
+	
+}
+
+.funciones{
+	
+}

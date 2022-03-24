@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Acceso usuario</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" th:href="@{/css/hojaEstilos.css}" />
+
+</head>
+
+<body>
+	<!--Cabecera de la pagina de inicio -->
+	<div>
+		<table>
+			<tr>
+				<fieldset>
+					<legend>Panel de Control</legend>
+
+					Direccion IP: <input type="text" size="16" disabled th:value="${direccionIP}" />
+					</br>
+					Navegador: <input type="text" size="50" name="direccionIP" id="direccionIP" disabled
+						th:value="${navegador}" />
+
+				</fieldset>
+			</tr>
+		</table>
+	</div>
+
+	</br>
+	</br>
+	<!-- Formulario de inicio -->
+
+	<form action="login" method="POST" th:object="${usuarioLogin}">
+		<table class="tableLogin">
+			<tr>
+				<th> Acceso usuario </th>
+			</tr>
+
+			<tr>
+				<td>Usuario: <input type="text" name="usuario" th:field="*{usuario}" />
+					<!-- Validacion -->
+					<span th:text="${#maps.containsKey(listaErrores, 'usuario') ? listaErrores.get('usuario'): ''}" />
+				</td>
+			</tr>
+
+			<tr>
+				<td>Contraseña: <input type="password" name="clave" th:field="*{clave}" />
+					<!-- Validacion -->
+					<span th:text="${#maps.containsKey(listaErrores, 'clave') ? listaErrores.get('clave'): ''}" />
+
+
+				</td>
+			</tr>
+			<td>
+				<span class="rojo negrita"
+					th:text="${#maps.containsKey(listaErrores, 'acceso') ? listaErrores.get('acceso'): ''}" />
+				</br>
+				<!-- Botones Acceder-->
+				<input type="submit" value="Acceder" />
+			</td>
+
+		</table>
+
+
+
+	</form>
+
+
+</body>
+
+</html>
